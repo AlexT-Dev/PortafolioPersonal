@@ -15,17 +15,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../personalStyle.css" rel="stylesheet" type="text/css"/>
+        
+        <link rel="stylesheet" type="text/css" href="./css/personalstyle.css"/>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+        
         <title>Portafolio</title>
     </head>
 
     <body>
-        <div class="container">
+        <div class="principalcontainer">
             
-            <div>
+            <div class="table-fixed thead">
                 <p> inicio de portafolio 123 231122</p>
                    
             </div>

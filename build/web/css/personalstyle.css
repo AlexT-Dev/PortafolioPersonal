@@ -1,0 +1,214 @@
+
+/* 
+    Created on : 25/01/2021, 12:41:13 PM
+    Author     : Alejandro Téllez
+    Objective  : Creación de estilos CSS para usarse en el proyecto
+*/
+
+/* Variables Globales de Color de Fondo */
+
+:root {
+--back-color-header: #603601;
+}
+.titles {
+    font-size: 30px;
+    color: blue;
+}
+
+/* Para grid citas modal */
+#grid-citas {
+  display: grid;
+  /* height: 100px; Para en caso de que sea fijo*/ 
+  grid-template-columns: 300px;
+  grid-template-rows: 50px 50px;
+}
+
+/* Para grid encabezados */
+#grid-encabezados {
+  display: grid;
+  /* height: 100px; Para en caso de que sea fijo*/ 
+  grid-template-columns: 1000px 500px;
+  grid-template-rows: 40px;
+}
+
+/* Para grid normal */
+#grid {
+  display: grid;
+  /* height: 100px; Para en caso de que sea fijo*/ 
+  grid-template-columns: 1000px 500px;
+  grid-template-rows: 30px;
+}
+
+/* Para grid grandes */
+#grid-large {
+  display: grid;
+  height: 70%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 500px 1000px; /* 2 columnas de 500px y */
+  grid-template-rows: 400px;          /* una fila de 400px*/
+}
+
+/* Para grid historial */
+#grid-historial {
+  display: grid;
+  height: 70%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 300px 650px 549px; /* 3 columnas  y */
+  grid-template-rows: 380px;        /* 1 fila*/
+}
+.table-fixed thead,
+.table-fixed tfoot{
+  width: 100%;
+}
+
+.table-fixed tbody {
+  /*height: 400px; Para todos del mismo tamaño*/
+  overflow-y: auto;
+  width: 100%;
+}
+
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tfoot,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+  display: block;
+}
+
+.table-striped,
+.table-fixed tbody td,
+.table-fixed thead > tr> th,
+.table-fixed tfoot > tr> td{
+  float: left;
+  border-bottom-width: 0;
+  
+}
+
+.principalcontainer {  
+    
+    background-color: var(--back-color-header);  
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    padding: 25px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/*  ESTILOS DE BARRA LATERAL  */
+
+
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/

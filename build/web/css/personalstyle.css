@@ -1,4 +1,7 @@
 
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Splash&display=swap');
+
 /* 
     Created on : 25/01/2021, 12:41:13 PM
     Author     : Alejandro Téllez
@@ -8,11 +11,99 @@
 /* Variables Globales de Color de Fondo */
 
 :root {
---back-color-header: #603601;
+--back-color-header: #04293A; /* Warm de Google */
+/**** Fonts ****/
+--font-style-footer: 'Splash', cursive;
+--font-style-menu: 'Shadows Into Light', cursive;
+--font-size-footer: 20px;
+--font-color-menu: white;
+
+}
+
+.fontfooter{
+    font-family: var(--font-style-footer);
+    font-size: var(--font-size-footer);  
+    color: var(--font-color-menu);
 }
 .titles {
     font-size: 30px;
     color: blue;
+}
+
+/************ Formato de menu ******************/
+.menu ul {
+    
+    list-style: none;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    
+}
+
+.menu li a{
+    font-family: var(--font-style-menu); 
+    font-size: 25px;
+    text-decoration: none;
+    padding: 15px;
+    color: var(--font-color-menu);
+    display: block;
+    
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #CC9544;
+}
+
+
+/********* Header ******/
+
+.header {
+    
+    width: 100%;
+    background-color: var(--back-color-header);
+    text-align: center;
+    height: 250px;
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: fixed;
+}
+
+.body{  
+    margin: 0;
+    padding: 0;
+    background-color:  transparent; /*  var(--back-color-header);*/
+    padding: 25px;
+    margin-top: 251px;
+    background-image: url('fondopersonal.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    
+}
+
+
+
+/******** Para imagenes  *********/
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  height: 120px;
+  
+}
+
+img:hover {
+  box-shadow: 0 0 4px 3px burlywood;
 }
 
 /* Para grid citas modal */
@@ -88,16 +179,6 @@
   
 }
 
-.principalcontainer {  
-    
-    background-color: var(--back-color-header);  
-    border-radius: 10px;
-    border-style: solid;
-    border-color: black;
-    padding: 25px;
-    margin-top: 25px;
-    text-align: center;
-}
 
 /*  ESTILOS DE BARRA LATERAL  */
 

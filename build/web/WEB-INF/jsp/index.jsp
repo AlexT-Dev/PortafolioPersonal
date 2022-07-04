@@ -14,27 +14,43 @@
     
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <link rel="stylesheet" type="text/css" href="./css/personalstyle.css"/>
-
-        
-        <title>Portafolio</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="stylesheet" type="text/css" href="./css/personalstyle.css"/>
+       <title>Portafolio</title>
     </head>
-
-    <body>
-        <div class="principalcontainer">
+    <header class="header">
+     <div>
+       <img src="./css/Alex.png" alt="imagen personal"> 
+     </div>   
+     <div >   
+         
+      <nav  >
+         <div>
+            <ul class="menu">
+              <li ><a href="#">Inicio</a></li>
+              <li ><a href="#">Estudios</a></li>
+              <li ><a href="#">Empleos</a></li>
+              <li ><a href="#" >Transversales </a></li>
+              <li ><a href="#">Conocimientos</a></li>
+              <li ><a href="#">Proyectos</a></li> 
+              <li ><a href="#">Comunidad</a></li>
+              <li ><a href="#">Acerca de...</a></li> 
+            </ul>
+         </div>
+      </nav>
+   
             
-            <div class="table-fixed thead">
-                <p> inicio de portafolio 123 231122</p>
-                   
-            </div>
+     </div>   
+    </header>
+    <body class="body"> <!-- class="body" -->
+        <div >
+           <p>dsadasdasddasdsad  </p>
            
-                
-                
-        </div> 
+         </div> 
         
     </body>
-
+    <footer class="fontfooter">
+        The best page of my life
+    </footer> 
 </html>
  

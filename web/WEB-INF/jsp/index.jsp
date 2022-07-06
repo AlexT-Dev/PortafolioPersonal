@@ -18,39 +18,83 @@
        <link rel="stylesheet" type="text/css" href="./css/personalstyle.css"/>
        <title>Portafolio</title>
     </head>
-    <header class="header">
-     <div>
-       <img src="./css/Alex.png" alt="imagen personal"> 
-     </div>   
-     <div >   
-         
-      <nav  >
-         <div>
-            <ul class="menu">
-              <li ><a href="#">Inicio</a></li>
-              <li ><a href="#">Estudios</a></li>
-              <li ><a href="#">Empleos</a></li>
-              <li ><a href="#" >Transversales </a></li>
-              <li ><a href="#">Conocimientos</a></li>
-              <li ><a href="#">Proyectos</a></li> 
-              <li ><a href="#">Comunidad</a></li>
-              <li ><a href="#">Acerca de...</a></li> 
-            </ul>
-         </div>
-      </nav>
-   
-            
-     </div>   
+   <body class="body"> <!-- class="body" --> 
+    <header >
+      <div class="header">   
+        <div>
+            <a href="#modalPersonal"><img class="fotoPersonal" src="./css/Alex.png" alt="imagen personal"></a>  
+        </div>   
+        
+
+         <nav>
+            <div>
+               <ul class="menu">
+                 <li ><a href="#">Inicio</a></li>
+                 <li ><a href="#">Estudios</a></li>
+                 <li ><a href="#">Empleos</a></li>
+                 <li ><a href="#" >Transversales </a></li>
+                 <li ><a href="#">Conocimientos</a></li>
+                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="#">Comunidad</a></li>
+                 <li ><a href="#">Acerca de...</a></li> 
+               </ul>
+            </div>
+         </nav>
+          <div>  <!-- Para iconos de redes sociales -->
+            <div>
+              <img class="fotoReduce" src="./css/fb.png" alt="facebook"> 
+            </div>
+            <div>
+              <img class="fotoReduce" src="./css/gh.png" alt="GitHub"> 
+            </div> 
+              <div>
+              <img class="fotoReduce" src="./css/in.png" alt="Indeed"> 
+            </div> 
+          </div> 
+      </div>
     </header>
-    <body class="body"> <!-- class="body" -->
+    
         <div >
            <p>dsadasdasddasdsad  </p>
            
          </div> 
-        
-    </body>
-    <footer class="fontfooter">
+     <footer class="fontfooter">
         The best page of my life
-    </footer> 
+   </footer>   
+   
+  <!-- Modal para datos de la fotografía --->
+     <div class="containerModal" id="modalPersonal">
+      <div class="popup">
+         <div class="imagen"></div>
+          <div class="text-modal">
+              <p>
+                sdsadsad
+                asdsdasd
+                asd
+                sad
+                asd
+                sa
+                dsa
+                d
+                sad
+                sad
+                a
+                as
+                as
+                as
+                as
+                as
+                as
+                as
+                
+                a
+              </p>
+          </div>
+         <div><a href="#" class="btn-closeModal">תודה</a></div>
+      </div> 
+     </div>
+   
+  </body>
+  
 </html>
  

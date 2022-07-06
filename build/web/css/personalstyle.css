@@ -31,11 +31,14 @@
 }
 
 /************ Formato de menu ******************/
+
+
 .menu ul {
     
     list-style: none;
     width: 90%;
     max-width: 1000px;
+    max-height: 300px;
     margin: auto;
     
 }
@@ -67,10 +70,11 @@
     width: 100%;
     background-color: var(--back-color-header);
     text-align: center;
-    height: 250px;
+    height: 160px;
     left: 0; /* Posicionamos la cabecera al lado izquierdo */
     top: 0; /* Posicionamos la cabecera pegada arriba */
     position: fixed;
+    
 }
 
 .body{  
@@ -91,7 +95,7 @@
 
 /******** Para imagenes  *********/
 
-img {
+.fotoPersonal {
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 100px;
@@ -102,9 +106,92 @@ img {
   
 }
 
-img:hover {
+.fotoReduce {
+/*  border: 1px solid #ddd;*/
+  border-radius: 10px;
+  width: 20px;
+  float: right;
+  margin: 5px;
+  padding: 2px;
+  height: 20px;
+  
+}
+
+.fotoPersonal:hover {
   box-shadow: 0 0 4px 3px burlywood;
 }
+
+.fotoReduce:hover {
+  box-shadow: 0 0 4px 3px burlywood;
+}
+
+
+/*************** Para modales *****/
+
+.containerModal {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.popup {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    
+    
+}
+
+.containerModal:target{ /* Cuando tenga el focus */
+    visibility: visible;
+    opacity: 0.7;
+    background: #CC9544;
+    transition: all 600ms;
+    color: transparent;
+    border-radius: 10px; 
+    
+    
+}
+
+.text-modal {
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto;
+    justify-content: space-between;
+    color: black;
+   
+}
+
+.btn-closeModal{
+    width: 30px;
+    height: 12px;
+    padding: 10px;
+    position: absolute;
+    right: -5px;
+    top: 60px;
+    padding: 5px;
+    background: white;
+    color: black;
+    border-radius: 30%;
+    line-height: 10px;
+    text-decoration: none;
+    
+}
+
 
 /* Para grid citas modal */
 #grid-citas {
@@ -192,12 +279,12 @@ img:hover {
 		top: 0;left: 0;
 	}
 	/*Estilos para el encabezado*/
-	.header{
+/*	.header{
 		width: 100%;
 		height: 100px;
 		position: fixed;
 		top: 0;left: 0;
-	}
+	}*/
 	.container{
 		width: 90%;
 		max-width: 1200px;

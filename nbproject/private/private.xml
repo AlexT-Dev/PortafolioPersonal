@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/PortafolioPersonal/src/java/mx/com/portafolio/entities/SchoolLevel.java</file>
             <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/PortafolioPersonal/web/css/personalstyle.css</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/PortafolioPersonal/src/java/mx/com/portafolio/controller/AdminNivelEscolar.java</file>
             <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/PortafolioPersonal/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/C:/Users/lenovo/Documents/NetBeansProjects/PortafolioPersonal/web/WEB-INF/jsp/AdminNivelEscolar.jsp</file>
         </group>
     </open-files>
 </project-private>

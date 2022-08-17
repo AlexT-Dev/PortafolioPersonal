@@ -22,7 +22,7 @@
     <header >
       <div class="header">   
         <div>
-            <a href="#modalPersonal"><img class="fotoPersonal" src="./css/Alex.png" alt="imagen personal"></a>  
+            <a href="#modalPersonal"><span title="Datos Personales"><img class="fotoPersonal" src="./css/Alex.png" alt="imagen personal"></span></a>  
         </div>   
         
 
@@ -42,20 +42,20 @@
          </nav>
           <div>  <!-- Para iconos de redes sociales -->
             <div>
-              <img class="fotoReduce" src="./css/fb.png" alt="facebook"> 
+                <a href="https://www.facebook.com/profile.php?id=100008755599666" target="_blank"><span title="Facebook"><img class="fotoReduce" src="./css/fb.png" alt="facebook"></span></a>
             </div>
             <div>
-              <img class="fotoReduce" src="./css/gh.png" alt="GitHub"> 
+                <a href="https://github.com/AlexT-Dev" target="_blank"><span title="Gut Hub"><img class="fotoReduce" src="./css/gh.png" alt="GitHub"></span></a>
             </div> 
               <div>
-              <img class="fotoReduce" src="./css/in.png" alt="Indeed"> 
+                  <a href="https://www.linkedin.com/in/alejandro-t%C3%A9llez-aguilar-175b02214/" target="_blank"><span title="LinkedIn"><img class="fotoReduce" src="./css/in.png" alt="Indeed"></span></a> 
             </div> 
           </div> 
       </div>
     </header>
     
         <div >
-           <p>dsadasdasddasdsad  </p>
+           <p>aquí va todo lo del Body  </p>
            
          </div> 
      <footer class="fontfooter">
@@ -67,30 +67,18 @@
       <div class="popup">
          <div class="imagen"></div>
           <div class="text-modal">
-              <p>
-                sdsadsad
-                asdsdasd
-                asd
-                sad
-                asd
-                sa
-                dsa
-                d
-                sad
-                sad
-                a
-                as
-                as
-                as
-                as
-                as
-                as
-                as
-                
-                a
-              </p>
+              <p class="encPersonales">DATOS PERSONALES</p>
+              <hr class="hrModal">
+              <form>
+              <label class="encDato labelModal">Nombre:</label><p class="encDato pModal"> Alejandro Téllez Aguilar</p>
+              <label class="encDato labelModal">Domicilio: </label><p class="encDato pModal"> Justo Sierra 221, Colima, Col., México, C. P. 28010</p>
+              <label class="encDato labelModal">Teléfono: </label><p class="encDato pModal">+52 312 194 85 62</p>
+              <label class="encDato labelModal">R.F.C.: </label><p class="encDato pModal">TEAA701216MB1</p>
+              <label class="encDato labelModal">EMail: </label><p class="encDato pModal">atacolmx@hotmail.com, atacolmx@gmail.com</p>
+              </form>
+              
           </div>
-         <div><a href="#" class="btn-closeModal">תודה</a></div>
+         <div><a href="#" class="btn-closeModal"><span title="Cerrar">✔</span></a></div>
       </div> 
      </div>
    

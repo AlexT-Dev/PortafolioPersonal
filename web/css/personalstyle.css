@@ -16,6 +16,7 @@
 --font-style-modalPersonal: 'Oswald', sans-serif;
 --font-size-footer: 20px;
 --font-color-menu: white;
+--back-color-grid-data: #1746A2;
 
 }
 
@@ -90,7 +91,47 @@
     
 }
 
+/******** Contenedor de Registros  *********/
 
+.body-contenedor {
+	background: #1D202B;
+	color:#c7c7c7;
+	font-family: 'Roboto', sans-serif;
+        border: 1px solid #ddd;
+        
+}
+
+.etiquetas-gral .p {
+    color: #CC9544;
+    font-family: --font-style-modalPersonal;
+    font:bold;
+    
+   
+}
+
+
+
+.etiquetas-gral{
+    
+    max-width: 1800px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    background: var(--back-color-header);
+    border: 1px solid;
+    border-color: #CC9544;
+    opacity: 0.8;
+    transition: all 600ms;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 3px burlywood;
+   
+}
+
+.etiqueta {
+    display:grid;
+    grid-template-rows: 1fr;
+    margin: 10px;
+}
 
 /******** Para imagenes  *********/
 

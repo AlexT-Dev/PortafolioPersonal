@@ -59,39 +59,27 @@
       </div>
     </header>
    <body class="body"> <!-- class="body" --> 
-        <%-- Para tabla de desplegado --%>
+       <ul >
+         <c:forEach var="dato" items="${lista}">
+            <li class="fijar-etiquetas etiquetas-gral ">    
+             <p class="p">Escuela:</p>
+             <label class="label">${dato.schoolname} </label>
+             <p class="p">De:</p>
+             <label class="label">${dato.schoolyearinicio}</label>
+             <p class="p">A: </p>
+             <label class="label">${dato.schoolyearfin}</label>
+             <P class="p">Nivel:  </p>
+             <label class="label">${dato.certificatename}</label>
+             <div class="doc-recibido">
+               <p class="p">Documento:  </p>
+               <label class="label">${dato.certificatecareer}</label>
+             </div>
+
+            </li>
+            <div style="margin-top: 10px;"></div>
+         </c:forEach>
+       </ul>
      
-        <table class="tabla">
-            
-          <thead class="">
-            <tr class="tabla-thead tabla-tr" >
-                
-                <th class="tabla-th">ESTUDIOS REALIZADOS</th>
-            </tr>
-          </thead>
-          
-          <tbody class="tbody" >
-            <tr>
-              <c:forEach var="dato" items="${lista}">
-                <td class="tabla-td">
-                 <p class="p">Escuela: ${dato.schoolname} </p>
-                 <p class="p">De: ${dato.schoolyearinicio} </p>
-                 <p class="p">A: ${dato.schoolyearfin} </p>
-                 <P class="p">Nivel: ${dato.certificatename} </p>
-
-                 <div class="doc-recibido">
-                   <p class="p">Documento: ${dato.certificatecareer} </p>
-                 </div>
-                 <div style="margin-top: 2px;"></div>
-                </td>
-
-              </c:forEach>
-
-            </tr>
-          </tbody>
-
-        </table>
-      
        
     </body>
     <footer class="position-absolute">
@@ -103,5 +91,4 @@
     
     <%-- Borrar hacia abajo --%>
     
-                            
-                                
+                 

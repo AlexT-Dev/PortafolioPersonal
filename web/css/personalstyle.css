@@ -14,6 +14,8 @@
 --font-style-footer: 'Splash', cursive;
 --font-style-menu: 'Shadows Into Light', cursive;
 --font-style-modalPersonal: 'Oswald', sans-serif;
+--font-style-etiqueta: 'Alkalami', serif;;
+--font-style-contenido: 'Acme', sans-serif;
 --font-size-footer: 20px;
 --font-color-menu: white;
 --back-color-grid-data: #1746A2;
@@ -92,6 +94,19 @@
 
 /******** Contenedor de Registros con table *********/
 
+.fijar-div {
+    background-color:#c7c7c7;
+     opacity: 0.8;
+      max-width: 95%;
+     margin: auto;
+     position: fixed;
+ }
+
+ .fijar-navega {
+    background-color:#c7c7c7;
+     opacity: 0.8;
+ }
+ 
 .tabla{
     
     
@@ -139,8 +154,6 @@
     box-shadow: 0 0 4px 3px burlywood;
 }
 
-
-
 .tabla-td .p {
     color: #CC9544;
     font-family: var(--font-style-menu);
@@ -149,10 +162,7 @@
     margin-left: 10px;
  }
  
- .fijar-div {
-    
-    
- }
+ 
 
 /******** Contenedor de Registros con li *********/
 
@@ -164,19 +174,19 @@
 }
 
 .fijar-etiquetas{
-   position: static;
+   position: sticky;
+    top: 171px;
     
 }
 
 
 .etiquetas-gral{ 
-    
+    position: sticky; 
     max-width: 95%;
     
     margin: auto;
     /*padding: 10px;*/
     
-    /*display: grid;*/
     background: var(--back-color-header);
     border: 1px solid;
     border-color: #CC9544;
@@ -184,29 +194,42 @@
     transition: all 800ms;
     border-radius: 5px;
     box-shadow: 0 0 4px 3px burlywood;
-    
+    display: block;
     
    
 }
 
 .etiquetas-gral .p {
     color: #CC9544;
-    font-family: var(--font-style-menu);
+    font-family: var(--font-style-contenido);
     font:bold;
     line-height: 1px;
     margin-left: 10px;
-    
+    font-size: 20px;
+   
+}
+
+.etiquetas-gral .label {
+    color: #CC9544;
+    font-family: var(--font-style-etiqueta);
+    font:bold;
+    line-height: 1px;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-left: 100px;
    
 }
 
 .doc-recibido{
     text-align: right;
+    padding-bottom: 12px;
+    padding-right: 20px;
     
 }
 
 .doc-recibido .p {
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     padding-right: 10px;
 }
 

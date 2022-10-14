@@ -29,8 +29,8 @@
          <nav>
             <div>
                <ul class="menu">
-                 <li ><a href="#">Inicio</a></li>
-                 <li ><a href="#">Estudios</a></li>
+                 <li ><a href="index.htm">Inicio</a></li>
+                 <li ><a href="AdminNivelEscolar.htm">Estudios</a></li>
                  <li ><a href="#">Empleos</a></li>
                  <li ><a href="#" >Transversales </a></li>
                  <li ><a href="#">Conocimientos</a></li>

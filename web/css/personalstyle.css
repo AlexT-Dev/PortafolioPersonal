@@ -81,56 +81,140 @@
     margin: 0;
     padding: 0;
     background-color:  transparent; /*  var(--back-color-header);*/
-    padding: 25px;
-    margin-top: 251px;
+/*    padding: 25px;*/
+    margin-top: 170px;
     background-image: url('fondopersonal.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     
-    
 }
 
-/******** Contenedor de Registros  *********/
+/******** Contenedor de Registros con table *********/
 
-.body-contenedor {
-	background: #1D202B;
-	color:#c7c7c7;
-	font-family: 'Roboto', sans-serif;
-        border: 1px solid #ddd;
-        
-}
-
-.etiquetas-gral .p {
-    color: #CC9544;
-    font-family: --font-style-modalPersonal;
-    font:bold;
+.tabla{
     
-   
-}
-
-
-
-.etiquetas-gral{
     
-    max-width: 1800px;
+    width: 1200px;
+    
     margin: auto;
-    padding: 10px;
+   
+    /*padding: 10px;*/
+    align-items: center;
+    
+    
+    border-collapse: separate;
+    border: 2px solid;
+}
+
+.tabla-thead{
+    
+    
+}
+
+.tabla-tr{
+    
+    color: wheat;
+}
+
+.tabla-th {
+    
+    top: 0px;
+      
+}
+
+.tbody{
+   top: 10px;
+}
+.tabla-td{
+    
+    
     display: grid;
     background: var(--back-color-header);
     border: 1px solid;
     border-color: #CC9544;
     opacity: 0.8;
-    transition: all 600ms;
+    transition: all 800ms;
     border-radius: 5px;
     box-shadow: 0 0 4px 3px burlywood;
+}
+
+
+
+.tabla-td .p {
+    color: #CC9544;
+    font-family: var(--font-style-menu);
+    font:bold;
+    line-height: 1px;
+    margin-left: 10px;
+ }
+ 
+ .fijar-div {
+    
+    
+ }
+
+/******** Contenedor de Registros con li *********/
+
+.etiquetas-contenedor {
+   
+   position: absolute;
+   display: grid;
+    
+}
+
+.fijar-etiquetas{
+   position: static;
+    
+}
+
+
+.etiquetas-gral{ 
+    
+    max-width: 95%;
+    
+    margin: auto;
+    /*padding: 10px;*/
+    
+    /*display: grid;*/
+    background: var(--back-color-header);
+    border: 1px solid;
+    border-color: #CC9544;
+    opacity: 0.8;
+    transition: all 800ms;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 3px burlywood;
+    
+    
    
 }
 
-.etiqueta {
+.etiquetas-gral .p {
+    color: #CC9544;
+    font-family: var(--font-style-menu);
+    font:bold;
+    line-height: 1px;
+    margin-left: 10px;
+    
+   
+}
+
+.doc-recibido{
+    text-align: right;
+    
+}
+
+.doc-recibido .p {
+    font-size: 20px;
+    font-weight:bold;
+    padding-right: 10px;
+}
+
+.etiqueta { /* Para espcios entre etiquetas de datos*/
     display:grid;
-    grid-template-rows: 1fr;
-    margin: 10px;
+    
+    margin-top: 10px;
+    
 }
 
 /******** Para imagenes  *********/
@@ -297,7 +381,7 @@
 }
 
 /* Para grid grandes */
-#grid-large {
+.grid-large {
   display: grid;
   height: 70%;
   width: 50%;

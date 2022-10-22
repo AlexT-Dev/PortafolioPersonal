@@ -20,6 +20,12 @@
                 <prop key="index.htm">indexController</prop>
                 
                 <prop key="AdminNivelEscolar.htm">AdminNivelEscolar</prop>
+                <prop key="AdminJobs.htm">AdminJobs</prop>
+                <prop key="AdminCrosscutting.htm">AdminCT</prop>
+                <prop key="AdminKnowledge.htm">AdminKnow</prop>
+                <prop key="AdminProjects.htm">AdminPro</prop>
+                <prop key="AcercaDe.htm">AdminAbout</prop>
+                
             </props>
         </property>
     </bean>
@@ -41,5 +47,11 @@
     -->
     
     <bean name="AdminNivelEscolar" class="mx.com.portafolio.controller.AdminNivelEscolar"/>
-
+    <bean name="AdminJobs" class="mx.com.portafolio.controller.AdminJobs"/>
+    <bean name="AdminCT" class="mx.com.portafolio.controller.AdminCrosscutting"/>
+    <bean name="AdminKnow" class="mx.com.portafolio.controller.AdminKnowledge"/>
+    <bean name="AdminPro" class="mx.com.portafolio.controller.AdminProjects"/>
+    <bean name="AdminAbout" class="mx.com.portafolio.controller.About"/>
+    
+    
 </beans>

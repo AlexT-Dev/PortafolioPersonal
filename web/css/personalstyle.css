@@ -16,6 +16,7 @@
 --font-style-modalPersonal: 'Oswald', sans-serif;
 --font-style-etiqueta: 'Alkalami', serif;;
 --font-style-contenido: 'Acme', sans-serif;
+--font-style-textarea: 'Fuzzy Bubbles', cursive;
 --font-size-footer: 20px;
 --font-color-menu: white;
 --back-color-grid-data: #1746A2;
@@ -181,11 +182,10 @@
 
 
 .etiquetas-gral{ 
-    position: sticky; 
-    max-width: 95%;
     
+    max-width: 1200px;
     margin: auto;
-    /*padding: 10px;*/
+    padding-bottom: 15px;
     
     background: var(--back-color-header);
     border: 1px solid;
@@ -206,7 +206,7 @@
     line-height: 1px;
     margin-left: 10px;
     font-size: 20px;
-   
+    
 }
 
 .etiquetas-gral .label {
@@ -217,8 +217,24 @@
     margin-left: 10px;
     font-size: 20px;
     margin-left: 100px;
-   
+    
 }
+
+.etiquetas-gral .textarea {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    min-width: 1180px;
+    max-width: 1180px;
+    overflow: hidden;
+    height: 160px;
+    color: #CC9544;
+    font-family: var(--font-style-textarea);
+    font-size: 15px;
+    resize:none;
+    
+}
+
 
 .doc-recibido{
     text-align: right;

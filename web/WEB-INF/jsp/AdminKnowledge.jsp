@@ -1,8 +1,8 @@
 <%-- 
-    Document   : AdminNivelEscolar
+    Document   : AdminKnowledge
     Created on : 17 Oct. 2022, 06:22:05
     Author     : Alejandro Téllez
-    Comment    : Muestra la relación de Comptencias transversales
+    Comment    : Muestra la relación de Conocimientos
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -41,9 +41,9 @@
                  <li ><a href="AdminJobs.htm">Empleos</a></li>
                  <li ><a href="AdminCrosscutting.htm" >Transversales </a></li>
                  <li ><a href="#">Conocimientos</a></li>
-                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="AdminProjects.htm">Proyectos</a></li> 
                  <li ><a href="#">Comunidad</a></li>
-                 <li ><a href="#">Acerca de...</a></li> 
+                 <li ><a href="AcercaDe.htm">Acerca de...</a></li> 
                </ul>
             </div>
          </nav>
@@ -65,16 +65,13 @@
          <c:forEach var="dato" items="${lista}">
              
              <li class="fijar-etiquetas etiquetas-gral ">    
-             <div class="doc-recibido">
+              <div class="doc-recibido">
                <p class="p">Componente:</p>
                <label class="label">${dato.knowledgetype} </label>
                
               </div>
-             <p class="p">Paquete:</p>
-               
-                      <textarea class="textarea">${dato.knowledgename} </textarea>
-
-                   
+              <p class="p">Paquete:</p>
+              <textarea class="textarea" readonly>${dato.knowledgename} </textarea>
             </li>
             <div style="margin-top: 10px;"></div>
          </c:forEach>

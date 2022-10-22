@@ -17,15 +17,15 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  *
  * @author Alejandro Téllez Aguilar
- * Desplegado de Nivel Escolar
- * Fecha: 6 de Octubre de 2022
+ * Desplegado de Empleos
+ * Fecha: 14 de Octubre de 2022
  */
 
 @Controller
-public class AdminNivelEscolar {
+public class AdminJobs {
     
      
-    List DataNE;                                //Para la lista de niveles escolares
+    List DataNE;                                //Para la lista de empleos
     String nombre_nivel;                            
     Conexion connecting = new Conexion();    //realiza la conexión a la base de datos
     JdbcTemplate jdbcTemplate = new JdbcTemplate(connecting.Conectar());
@@ -34,27 +34,24 @@ public class AdminNivelEscolar {
 
     //Para listar todos los niveles en la interface de administración de niveles y buscar un nivel específico
     
-    @RequestMapping(value="AdminNivelEscolar.htm")
+    @RequestMapping(value="AdminJobs.htm")
     public ModelAndView Listar(String ane){
         
         
           
         if (ane == "" || ane == null) { //Si no tiene nada
             
-            //Niveles escolares
-            String QCitas = "select dgenerales.iddgeneral, schoollevel.schoolname, schoollevel.schoolyearinicio, " +
-                            "schoollevel.schoolyearfin, certificate.certificatename,  certificate.certificatecareer " +
-                            "from dgenerales, schoollevel inner join certificate on schoollevel.idcertificate = certificate.idcertificate " +
-                            "where dgenerales.iddgeneral=1 order by schoollevel.schoolyearinicio";
-            DataNE = this.jdbcTemplate.queryForList(QCitas);
+            //Empleos
+            String QJobs = "call pjobs(1)";  //Procedimiento almacenado
+//                    
+            DataNE = this.jdbcTemplate.queryForList(QJobs);
           
         } 
         
         AdNE.addObject("lista", DataNE);
-        AdNE.setViewName("AdminNivelEscolar");
+        AdNE.setViewName("AdminJobs");
         return AdNE;
     }
     
      
 }
-

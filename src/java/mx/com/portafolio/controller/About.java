@@ -17,15 +17,15 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  *
  * @author Alejandro Téllez Aguilar
- * Desplegado de Nivel Escolar
- * Fecha: 6 de Octubre de 2022
+ * Desplegado de Acerca de...
+ * Fecha: 20 de Octubre de 2022
  */
 
 @Controller
-public class AdminNivelEscolar {
+public class About {
     
      
-    List DataNE;                                //Para la lista de niveles escolares
+    List DataNE;                                //Para la lista de contenido
     String nombre_nivel;                            
     Conexion connecting = new Conexion();    //realiza la conexión a la base de datos
     JdbcTemplate jdbcTemplate = new JdbcTemplate(connecting.Conectar());
@@ -34,7 +34,7 @@ public class AdminNivelEscolar {
 
     //Para listar todos los niveles en la interface de administración de niveles y buscar un nivel específico
     
-    @RequestMapping(value="AdminNivelEscolar.htm")
+    @RequestMapping(value="AcercaDe.htm")
     public ModelAndView Listar(String ane){
         
         
@@ -42,19 +42,15 @@ public class AdminNivelEscolar {
         if (ane == "" || ane == null) { //Si no tiene nada
             
             //Niveles escolares
-            String QCitas = "select dgenerales.iddgeneral, schoollevel.schoolname, schoollevel.schoolyearinicio, " +
-                            "schoollevel.schoolyearfin, certificate.certificatename,  certificate.certificatecareer " +
-                            "from dgenerales, schoollevel inner join certificate on schoollevel.idcertificate = certificate.idcertificate " +
-                            "where dgenerales.iddgeneral=1 order by schoollevel.schoolyearinicio";
+            String QCitas = "call spabout(1)";
             DataNE = this.jdbcTemplate.queryForList(QCitas);
           
         } 
         
         AdNE.addObject("lista", DataNE);
-        AdNE.setViewName("AdminNivelEscolar");
+        AdNE.setViewName("AcercaDe");
         return AdNE;
     }
     
      
 }
-

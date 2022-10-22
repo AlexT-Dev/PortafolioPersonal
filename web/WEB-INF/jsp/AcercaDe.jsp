@@ -1,13 +1,11 @@
 <%-- 
-    Document   : AdminProjects
-    Created on : 19 Oct. 2022, 06:22:05
+    Document   : AdminNivelEscolar
+    Created on : 20 Oct. 2022, 19:22:05
     Author     : Alejandro Téllez
-    Comment    : Muestra la relación de Proyectos
+    Comment    : Muestra la información de la página
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page import="org.springframework.jdbc.core.JdbcTemplate"%>
-<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -41,9 +39,9 @@
                  <li ><a href="AdminJobs.htm">Empleos</a></li>
                  <li ><a href="AdminCrosscutting.htm" >Transversales </a></li>
                  <li ><a href="AdminKnowledge.htm">Conocimientos</a></li>
-                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="AdminProjects.htm">Proyectos</a></li> 
                  <li ><a href="#">Comunidad</a></li>
-                 <li ><a href="AcercaDe.htm">Acerca de...</a></li> 
+                 <li ><a href="#">Acerca de...</a></li> 
                </ul>
             </div>
          </nav>
@@ -63,21 +61,30 @@
    <body class="body"> <!-- class="body" --> 
        <ul >
          <c:forEach var="dato" items="${lista}">
-             
-             <li class="fijar-etiquetas etiquetas-gral ">    
-              <div class="doc-recibido">
-               <p class="p">Componente:</p>
-               <label class="label">${dato.projectarea} </label>
-              </div>
-              <p class="p">Proyecto:</p>
-              
-              <textarea class="textarea" readonly>${dato.projectdescription} </textarea>
+            <li class="fijar-etiquetas etiquetas-gral ">    
+             <p class="p">Autor:</p>
+             <label class="label">${dato.autor} </label>
+             <p class="p">Fecha de Creación:</p>
+             <label class="label">${dato.creationdate}</label>
+             <p class="p">Lenguaje:</p>
+             <label class="label">${dato.language}</label>
+             <p class="p">Framework:</p>
+             <label class="label">${dato.framework}</label>
+             <P class="p">Servidor:  </p>
+             <label class="label">${dato.server}</label>
+             <P class="p">Componente:  </p>
+             <label class="label">${dato.component}</label>
+             <P class="p">Tipo de Aplicación:  </p>
+             <label class="label">${dato.application}</label>
+             <P class="p">Base de Datos:  </p>
+             <label class="label">${dato.database}</label>
+             <P class="p">IDE:  </p>
+             <label class="label">${dato.ide}</label>
             </li>
             <div style="margin-top: 10px;"></div>
          </c:forEach>
        </ul>
-       
-       
+     
        
     </body>
     <footer class="position-absolute">
@@ -86,44 +93,7 @@
 
     </html>
     
-<!--     <script>
-           
-//       let cmb = document.getElementById("c");
-//       cmb.style.height = cmb.scrollHeight + 'px';
-//       
-//       cmb.addEventListener("input", adjust);
-       function adjust(){
-           
-           this.style.height = "auto";
-           this.style.height = (this.scrollHeight)+ 'px';
-           
-       }
-       
-       
-    </script>-->
     
-    <%-- Borrar hacia abajo 
+    <%-- Borrar hacia abajo --%>
     
-       <% 
-                    
-                  try {
-                   String datoUno = request.getParameter("${dato.knowledgetype}");  
-                   String QKn = "select knowledgename, knowledgetype from knowledge where knowledgetype = '" + cadena +  "' order by knowledgetype, knowledgename";
-                   Class.forName("com.mysql.jdbc.Driver");
-                   Connection conect = DriverManager.getConnection("jdbc:mysql://localhost:3306/portfolio?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrival=false", "root", "teaa701216mb1");
-                   Statement stm = conect.createStatement();
-                   ResultSet rs = stm.executeQuery(QKn);
-
-                   while (rs.next()) {%>
-                      <textarea class="textarea"><%=rs.getString("knowledgename")%> </textarea>
-
-                   <%}
-                     rs.close();
-                     stm.close();
-                     conect.close();
-                   } catch (Exception ex) {
-                     ex.printStackTrace();
-                     out.println("Error " + ex.getMessage());
-                   }
-                %>    
---%>
+                 

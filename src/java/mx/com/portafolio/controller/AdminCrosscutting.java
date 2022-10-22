@@ -17,44 +17,41 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  *
  * @author Alejandro Téllez Aguilar
- * Desplegado de Nivel Escolar
- * Fecha: 6 de Octubre de 2022
+ * Desplegado de Comptencias Transversales
+ * Fecha: 17 de Octubre de 2022
  */
 
 @Controller
-public class AdminNivelEscolar {
+public class AdminCrosscutting {
     
      
-    List DataNE;                                //Para la lista de niveles escolares
+    List DataCT;                                //Para la lista de CT
     String nombre_nivel;                            
     Conexion connecting = new Conexion();    //realiza la conexión a la base de datos
     JdbcTemplate jdbcTemplate = new JdbcTemplate(connecting.Conectar());
     
-    ModelAndView AdNE = new ModelAndView();
+    ModelAndView AdCT = new ModelAndView();
 
     //Para listar todos los niveles en la interface de administración de niveles y buscar un nivel específico
     
-    @RequestMapping(value="AdminNivelEscolar.htm")
+    @RequestMapping(value="AdminCrosscutting.htm")
     public ModelAndView Listar(String ane){
         
         
           
         if (ane == "" || ane == null) { //Si no tiene nada
             
-            //Niveles escolares
-            String QCitas = "select dgenerales.iddgeneral, schoollevel.schoolname, schoollevel.schoolyearinicio, " +
-                            "schoollevel.schoolyearfin, certificate.certificatename,  certificate.certificatecareer " +
-                            "from dgenerales, schoollevel inner join certificate on schoollevel.idcertificate = certificate.idcertificate " +
-                            "where dgenerales.iddgeneral=1 order by schoollevel.schoolyearinicio";
-            DataNE = this.jdbcTemplate.queryForList(QCitas);
+            //Empleos
+            String QCT = "call spcrosscuting(1)";  //Procedimiento almacenado
+//                    
+            DataCT = this.jdbcTemplate.queryForList(QCT);
           
         } 
         
-        AdNE.addObject("lista", DataNE);
-        AdNE.setViewName("AdminNivelEscolar");
-        return AdNE;
+        AdCT.addObject("lista", DataCT);
+        AdCT.setViewName("AdminCrosscutting");
+        return AdCT;
     }
     
      
 }
-

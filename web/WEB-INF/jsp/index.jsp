@@ -29,14 +29,14 @@
          <nav>
             <div>
                <ul class="menu">
-                 <li ><a href="index.htm">Inicio</a></li>
+                 <li ><a href="">Inicio</a></li>
                  <li ><a href="AdminNivelEscolar.htm">Estudios</a></li>
-                 <li ><a href="#">Empleos</a></li>
-                 <li ><a href="#" >Transversales </a></li>
-                 <li ><a href="#">Conocimientos</a></li>
-                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="AdminJobs.htm">Empleos</a></li>
+                 <li ><a href="AdminCrosscutting.htm" >Transversales </a></li>
+                 <li ><a href="AdminKnowledge.htm">Conocimientos</a></li>
+                 <li ><a href="AdminProjects.htm">Proyectos</a></li> 
                  <li ><a href="#">Comunidad</a></li>
-                 <li ><a href="#">Acerca de...</a></li> 
+                 <li ><a href="AcercaDe.htm">Acerca de...</a></li> 
                </ul>
             </div>
          </nav>
@@ -54,10 +54,7 @@
       </div>
     </header>
     
-        <div >
-           <p>aquí va todo lo del Body  </p>
-           
-         </div> 
+        
      <footer class="fontfooter">
         The best page of my life
    </footer>   

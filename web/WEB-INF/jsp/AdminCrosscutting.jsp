@@ -38,10 +38,10 @@
                  <li ><a href="AdminNivelEscolar.htm">Estudios</a></li>
                  <li ><a href="AdminJobs.htm">Empleos</a></li>
                  <li ><a href="" >Transversales </a></li>
-                 <li ><a href="#">Conocimientos</a></li>
-                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="AdminKnowledge.htm">Conocimientos</a></li>
+                 <li ><a href="AdminProjects.htm">Proyectos</a></li>
                  <li ><a href="#">Comunidad</a></li>
-                 <li ><a href="#">Acerca de...</a></li> 
+                 <li ><a href="AcercaDe.htm">Acerca de...</a></li>
                </ul>
             </div>
          </nav>
@@ -67,7 +67,7 @@
                <label class="label">${dato.crosscuttingname}</label>
              </div>
              <p class="p">Actividades:</p>
-             <textarea class="textarea">${dato.crosscuttingactivities} </textarea>
+             <textarea class="textarea" readonly>${dato.crosscuttingactivities} </textarea>
             </li>
             <div style="margin-top: 10px;"></div>
          </c:forEach>

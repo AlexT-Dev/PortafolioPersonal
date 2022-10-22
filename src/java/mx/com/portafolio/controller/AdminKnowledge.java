@@ -17,44 +17,42 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  *
  * @author Alejandro Téllez Aguilar
- * Desplegado de Nivel Escolar
- * Fecha: 6 de Octubre de 2022
+ * Desplegado de Conocimientos
+ * Fecha: 17 de Octubre de 2022
  */
 
 @Controller
-public class AdminNivelEscolar {
+public class AdminKnowledge {
     
      
-    List DataNE;                                //Para la lista de niveles escolares
+    List DataKnt;                             //Para la lista de Tipos de Conocimiento
+    
     String nombre_nivel;                            
     Conexion connecting = new Conexion();    //realiza la conexión a la base de datos
     JdbcTemplate jdbcTemplate = new JdbcTemplate(connecting.Conectar());
     
-    ModelAndView AdNE = new ModelAndView();
-
+     ModelAndView AdKn = new ModelAndView();
+    
     //Para listar todos los niveles en la interface de administración de niveles y buscar un nivel específico
     
-    @RequestMapping(value="AdminNivelEscolar.htm")
+    @RequestMapping(value="AdminKnowledge.htm")
     public ModelAndView Listar(String ane){
         
         
           
         if (ane == "" || ane == null) { //Si no tiene nada
             
-            //Niveles escolares
-            String QCitas = "select dgenerales.iddgeneral, schoollevel.schoolname, schoollevel.schoolyearinicio, " +
-                            "schoollevel.schoolyearfin, certificate.certificatename,  certificate.certificatecareer " +
-                            "from dgenerales, schoollevel inner join certificate on schoollevel.idcertificate = certificate.idcertificate " +
-                            "where dgenerales.iddgeneral=1 order by schoollevel.schoolyearinicio";
-            DataNE = this.jdbcTemplate.queryForList(QCitas);
-          
+            //Conocimientos-Componentes
+            String QKnt = "call spknowledget(1)";  //Procedimiento para obtener paquetes, knowledgetype
+            DataKnt = this.jdbcTemplate.queryForList(QKnt);
+            
         } 
         
-        AdNE.addObject("lista", DataNE);
-        AdNE.setViewName("AdminNivelEscolar");
-        return AdNE;
+        AdKn.addObject("lista", DataKnt);  //Objeto con los tipos de Conocimiento
+        
+        AdKn.setViewName("AdminKnowledge");
+        return AdKn;
     }
     
      
 }
-

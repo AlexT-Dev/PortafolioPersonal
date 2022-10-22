@@ -36,12 +36,12 @@
                <ul class="menu">
                  <li ><a href="index.htm">Inicio</a></li>
                  <li ><a href="AdminNivelEscolar.htm">Estudios</a></li>
-                 <li ><a href="AdminJobs.htm">Empleos</a></li>
-                 <li ><a href="#" >Transversales </a></li>
-                 <li ><a href="#">Conocimientos</a></li>
-                 <li ><a href="#">Proyectos</a></li> 
+                 <li ><a href="">Empleos</a></li>
+                 <li ><a href="AdminCrosscutting.htm" >Transversales </a></li>
+                 <li ><a href="AdminKnowledge.htm">Conocimientos</a></li>
+                 <li ><a href="AdminProjects.htm">Proyectos</a></li> 
                  <li ><a href="#">Comunidad</a></li>
-                 <li ><a href="#">Acerca de...</a></li> 
+                 <li ><a href="AcercaDe.htm">Acerca de...</a></li> 
                </ul>
             </div>
          </nav>
@@ -62,6 +62,10 @@
        <ul >
          <c:forEach var="dato" items="${lista}">
             <li class="fijar-etiquetas etiquetas-gral ">    
+             <div class="doc-recibido">
+               <p class="p">Empresa:  </p>
+               <label class="label">${dato.empresa}</label>
+             </div>
              <p class="p">Puesto:</p>
              <label class="label">${dato.puesto} </label>
              <p class="p">Empresa:</p>
@@ -69,11 +73,9 @@
              <p class="p">Jefe Inmediato: </p>
              <label class="label">${dato.jefeinmediato}</label>
              <P class="p">Periodo:  </p>
-             <label class="label">${dato.mesinicio}/${dato.yearinicio} a ${dato.mesfin}/${dato.yearfin}  (${dato.dur} AÑOS) </label>
-             <div class="doc-recibido">
-               <p class="p">Empresa:  </p>
-               <label class="label">${dato.empresa}</label>
-             </div>
+             <label class="label">${dato.monthini}/${dato.yearinicio} - ${dato.monthfin}/${dato.yearfin}  (${dato.dur} AÑOS) </label>
+             <P class="p">Actividades:  </p>
+             <textarea class="textarea" readonly>${dato.actividades}</textarea>
 
             </li>
             <div style="margin-top: 10px;"></div>

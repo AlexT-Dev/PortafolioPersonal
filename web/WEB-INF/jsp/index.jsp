@@ -22,7 +22,7 @@
     <header >
       <div class="header">   
         <div>
-            <a href="#modalPersonal"><span title="Datos Personales"><img class="fotoPersonal" src="./css/Alex.png" alt="imagen personal"></span></a>  
+            <a href="#modalPersonal"><span title="Datos Personales"><img class="fotoPersonal" src="./css/Alex.jpg" alt="imagen personal"></span></a>  
         </div>   
         
 
